@@ -283,7 +283,12 @@ p {
 }
 /* SPEAKERS SECTION */
 .speakers{
-
+  background-image: url("/assets/images/speakers/speakersbg.webp");
+  background-size: cover;
+  background-position: center right;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 .speakers__header{
   text-align: center;
