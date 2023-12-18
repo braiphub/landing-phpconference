@@ -30,3 +30,84 @@ function closeModal() {
   iframe.src = "";
   modal.style.display = "none";
 }
+
+/* JSON que ira adicionar os speakers */
+
+var speakers = [
+  {
+    speakers__name: "Nome Palestrante - Cargo",
+    speakers__theme: "Carreira e tecnologia, uma ponte para o sucesso!",
+    speakers__photo: "/assets/images/speakers/man.svg",
+    date: "06 de Junho de 2024",
+  },
+  {
+    speakers__name: "Nome Palestrante - Cargo",
+    speakers__theme: "Carreira e tecnologia, uma ponte para o sucesso!",
+    speakers__photo: "/assets/images/speakers/woman.svg",
+    date: "06 de Junho de 2024",
+  },
+  {
+    speakers__name: "Nome Palestrante - Cargo",
+    speakers__theme: "Carreira e tecnologia, uma ponte para o sucesso!",
+    speakers__photo: "/assets/images/speakers/man.svg",
+    date: "06 de Junho de 2024",
+  },
+  {
+    speakers__name: "Nome Palestrante - Cargo",
+    speakers__theme: "Carreira e tecnologia, uma ponte para o sucesso!",
+    speakers__photo: "/assets/images/speakers/woman.svg",
+    date: "06 de Junho de 2024",
+  },
+  {
+    speakers__name: "Nome Palestrante - Cargo",
+    speakers__theme: "Carreira e tecnologia, uma ponte para o sucesso!",
+    speakers__photo: "/assets/images/speakers/man.svg",
+    date: "06 de Junho de 2024",
+  },
+  {
+    speakers__name: "Nome Palestrante - Cargo",
+    speakers__theme: "Carreira e tecnologia, uma ponte para o sucesso!",
+    speakers__photo: "/assets/images/speakers/woman.svg",
+    date: "06 de Junho de 2024",
+  },
+];
+
+var grid = document.getElementById("speakersGrid");
+
+for (var i = 0; i < speakers.length; i++) {
+  var card = document.createElement("div");
+  card.className = "speakers__card";
+
+  var image = document.createElement("div");
+  image.className = "speakers__image";
+
+  var img = document.createElement("img");
+  img.src = speakers[i].speakers__photo;
+  img.alt = speakers[i].speakers__name;
+  img.className = "speakers__photo";
+  image.appendChild(img);
+
+  var info = document.createElement("div");
+  info.className = "speakers__info";
+
+  var nameSpeark = document.createElement("span");
+  nameSpeark.className = "speakers__name";
+  nameSpeark.textContent = speakers[i].speakers__name;
+
+  var theme = document.createElement("p");
+  theme.className = "speakers__theme";
+  theme.textContent = speakers[i].speakers__theme;
+
+  var date = document.createElement("span");
+  date.className = "date";
+
+  date.textContent = speakers[i].date;
+
+  grid.appendChild(card);
+  card.appendChild(image);
+
+  info.appendChild(nameSpeark);
+  card.appendChild(info);
+  info.appendChild(theme);
+  info.appendChild(date);
+}
