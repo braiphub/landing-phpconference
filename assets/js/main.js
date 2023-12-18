@@ -32,7 +32,6 @@ function closeModal() {
 }
 
 /* JSON que ira adicionar os speakers */
-
 var speakers = [
   {
     speakers__name: "Nome Palestrante - Cargo",
@@ -134,3 +133,8 @@ function countdown() {
 
 setInterval(countdown, 1000);
 countdown();
+
+/* PEGAR O ANO ATUAL */
+const currentYearElement = document.getElementById("currentYear");
+const currentYear = new Date().getFullYear();
+currentYearElement.textContent = currentYear;

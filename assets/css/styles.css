@@ -446,3 +446,20 @@ p {
     font-size: var(--h3-font-size);
   }
 }
+
+/* FOOTER SECTION */
+.footer{
+  background-color: var(--black-color);
+  padding: 3rem 1rem;
+}
+.footer__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.footer__copy{
+  color: var(--white-color);
+}
