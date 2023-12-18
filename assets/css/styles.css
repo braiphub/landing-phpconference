@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 :root {
   --primary-color: #0f1116;
   --black-color: #000000;
@@ -24,21 +24,19 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
-
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: var(--body-font);
+  background-color: var(--primary-color);
 }
-
 ul {
   list-style: none;
 }
@@ -46,13 +44,15 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
 h1,
 h2,
 h3,
 h4 {
   line-height: 140%;
   color: var(--white-color);
+}
+h1 {
+  font-size: var(--h1-font-size);
 }
 p {
   line-height: 160%;
@@ -123,14 +123,12 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   position: absolute;
-  bottom: 10px;
+  bottom: 70px;
 }
-
 .words {
   display: inline-block;
   animation: moveWords 50s linear infinite;
 }
-
 .words li {
   font-family: "IBM+Plex+Mono", sans-serif !important;
   display: inline-block;
@@ -138,7 +136,6 @@ p {
   font-size: var(--h4-font-size);
   padding: 16px 5px;
 }
-
 @keyframes moveWords {
   0% {
     transform: translateX(0);
@@ -147,7 +144,6 @@ p {
     transform: translateX(-100%);
   }
 }
-
 @media (max-width: 500px) {
   .logo__home {
     max-width: 350px;
@@ -155,4 +151,132 @@ p {
   .home__title {
     font-size: var(--h3-font-size);
   }
+}
+
+/* ABOUT SECTION */
+.about {
+  background-image: url("/assets/images/about/bgabout.webp");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 730px;
+  margin: 0 auto;
+  text-align: center;
+}
+.button__play {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button__play:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.play__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+.img__rotate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotateText 30s linear infinite;
+}
+@keyframes rotateText {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.about__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.about__title {
+  font-size: var(--h1-font-size);
+}
+.about__subtitle {
+  color: var(--white-color);
+  font-size: var(--h3-font-size);
+}
+.copy {
+  background: linear-gradient(93deg, #f90 18%, #f09 93.39%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--h3-font-size);
+  margin-top: 2rem;
+}
+
+/* Estilos do modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 11;
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.video__wrapper {
+  width: 980px;
+  height: 650px;
+}
+@media (max-width: 1020px) {
+    .video__wrapper {
+      width: 550px;
+      height: 415px;
+    }
+  }
+@media (max-width:689px) {
+  .video__wrapper {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media (max-width: 412px) {
+  .video__wrapper {
+    width: 350px;
+  }
+}
+@media (max-width: 350px) {
+  .video__wrapper {
+    width: 320px;
+  }
+}
+.close__button {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--white-color)
 }

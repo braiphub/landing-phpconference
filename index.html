@@ -69,6 +69,52 @@
           <li>NETWORKING /////////</li>
         </ul>
       </section>
+      <section class="about section">
+        <article class="about__container">
+          <div class="button__play" onclick="openModal()">
+            <div class="text__container">
+              <img
+                src="/assets/images/about/text.svg"
+                alt="Conheça sobre o PHPMG Conference"
+                class="img__rotate"
+                loading="lazy"
+              />
+              <div class="play__icon">
+                <img
+                  src="/assets/images/about/play.svg"
+                  alt="Play Icon"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="about__copy">
+            <h3 class="about__title">O que é o PHPMG?</h3>
+            <p class="about__subtitle">
+              Um evento grandioso para impulsionar desenvolvedores com inovações
+              e perspectivas inspiradoras sobre carreiras na tecnologia.
+            </p>
+            <span class="copy"
+              >Assista ao vídeo e embarque nesse trem com a gente!</span
+            >
+          </div>
+        </article>
+        <div class="modal" id="videoModal">
+          <div class="modal__content">
+            <span class="close__button" onclick="closeModal()">&times;</span>
+            <div class="video__wrapper">
+              <iframe
+                width="100%"
+                height="100%"
+                src=""
+                title="PHPMG Conference 2024"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="/assets/js/main.js"></script>
   </body>
