@@ -10,7 +10,7 @@
   --orange-color: #ff9900;
   --pink-color: #ff0099;
 
-  --body-font: "Space+Grotesk", sans-serif;
+  --body-font: "Space Grotesk";
   --time-font-size: 42px;
   --h1-font-size: 2rem;
   --h3-font-size: 1.5rem;
@@ -130,7 +130,7 @@ p {
   animation: moveWords 50s linear infinite;
 }
 .words li {
-  font-family: "IBM+Plex+Mono", sans-serif !important;
+  font-family: "IBM Plex Mono", sans-serif !important;
   display: inline-block;
   color: var(--white-color);
   font-size: var(--h4-font-size);
@@ -352,5 +352,97 @@ p {
 @media(max-width: 665px){
   .speakers__grid{
     grid-template-columns: repeat(1,1fr);
+  }
+}
+/* BUY SECTION */
+.buy__container{
+  display: flex;
+  flex-direction: column; 
+  gap: 4rem;
+}
+.buy__title{
+  text-align: center;
+  font-size: var(--h1-font-size);
+}
+.buy__title span{
+  color: var(--orange-color);
+}
+.buy__content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.buy__copy{
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.buy__text{
+  font-size: var(--h1-font-size);
+  max-width: 600px;
+}
+.date__event{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.date__event__copy{
+  font-size: var(--h4-font-size);
+  color: var(--white-color);
+  font-weight: 800;
+}
+.countdown{
+  display: flex;
+  gap: 1.875rem;
+  align-items: center;
+}
+.countdown__item{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.countdown__number{
+  font-size: var(--time-font-size);
+  font-weight: bold;
+}
+.countdown__text{
+  color: var(--white-color);
+  font-weight: 300;
+  font-size: var(--h4-font-size);
+}
+.buy__cta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buy__cta__content{
+  background-color: var(--black-second-color);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+.image__cta{
+  text-align: start;
+}
+@media(max-width: 810px){
+  .buy__content{
+   display: flex;
+   flex-direction: column;
+  }
+  .buy__cta__content{
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .speakers__title,
+  .buy__title,
+  .buy__text{
+    font-size: var(--h3-font-size);
   }
 }
