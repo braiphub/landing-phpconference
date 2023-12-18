@@ -127,7 +127,7 @@ p {
 }
 .words {
   display: inline-block;
-  animation: moveWords 50s linear infinite;
+  animation: moveWords 40s linear infinite;
 }
 .words li {
   font-family: "IBM Plex Mono", sans-serif !important;

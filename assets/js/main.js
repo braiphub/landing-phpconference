@@ -1,6 +1,6 @@
 const carousel = document.querySelector(".carousel");
 const wordsContainer = document.querySelector(".words");
-const words = document.querySelectorAll(".words span");
+const words = document.querySelectorAll(".words li");
 
 words.forEach((word) => {
   const clonedWord = word.cloneNode(true);
