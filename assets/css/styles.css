@@ -355,6 +355,14 @@ p {
   }
 }
 /* BUY SECTION */
+.buy{
+  background-image: url("/assets/images/buy/bgbuy.webp");
+  background-size: cover;
+  background-position: center left;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
 .buy__container{
   display: flex;
   flex-direction: column; 
