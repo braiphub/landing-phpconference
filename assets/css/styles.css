@@ -131,7 +131,7 @@ p {
   animation: moveWords 50s linear infinite;
 }
 
-.words span {
+.words li {
   font-family: "IBM+Plex+Mono", sans-serif !important;
   display: inline-block;
   color: var(--white-color);
